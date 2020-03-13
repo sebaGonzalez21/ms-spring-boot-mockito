@@ -26,7 +26,7 @@ public class ItemImpTest {
 
     @Test
     public void calculateService(){
-        when(itemRepository.findAll()).thenReturn(Arrays.asList(
+       when(itemRepository.findAll()).thenReturn(Arrays.asList(
                 new Item(2,"item2",10,10),
                 new Item(3,"item3",20,20)
         ));
@@ -39,7 +39,6 @@ public class ItemImpTest {
     public void calculateItemDto(){
         Item itemReturn = itemImp.returnItemDto();
         Item item = new Item(1,"Dragon Ball",1000,2);
-        assertEquals(item.getName(),itemReturn.getName());
         assertEquals(item.getName(),itemReturn.getName());
     }
 
